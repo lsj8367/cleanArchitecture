@@ -23,10 +23,10 @@ abstract class ArchitectureElement {
     static void denyDependency(String fromPackageName, String toPackageName, JavaClasses classes) {
         noClasses()
             .that()
-            .resideInAPackage("io.reflectoring.reviewapp.domain..")
+            .resideInAPackage("io.github.lsj8367.domain..")
             .should()
             .dependOnClassesThat()
-            .resideInAnyPackage("io.reflectoring.reviewapp.application..")
+            .resideInAnyPackage("io.github.lsj8367.application..")
             .check(classes);
     }
 
